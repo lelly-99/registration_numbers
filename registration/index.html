@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration_numbers.css">
+    <title>Registration Numbers</title>
+</head>
+<body>
+    <h1>Registration Numbers</h1>
+    <div class="centerDiv">
+        <label for="enteredRegistrationNumber">Registration Number:</label>
+        <input type="text" name="" value="" class="enteredRegistrationNumber">
+    </div>
+    <div class="centerDiv">
+        <button class="addButton" type="button" name="button" >Add</button>
+    </div>
+    <div class="centerDiv">
+        <input type="radio" name="town" value="capeTown" class="town">
+        <label for="capeTown">Cape Town</label>
+        <input type="radio" name="town" value="paarl" class="town">
+        <label for="paarl">Paarl</label>
+        <input type="radio" name="town" value="bellvile" class="town">
+        <label for="bellvile">Bellvile</label>
+    </div>
+    <div class="centerDiv">
+        <button class="showButton" type="button" name="button" >Show</button>
+    </div>
+    <div class="centerDiv">
+        <ul>
+            <li>
+                <div class="plate"><span class="registrationNumber"></span></div>
+            </li>
+            <li>
+                <div class="plate"><span class="registrationNumber"></span></div>
+            </li>
+            <li>
+                <div class="plate"><span class="registrationNumber"></span></div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="../factory_functions/factoryFunction.js"></script>
+<script src="./registration_numbers.js"></script>
+</html>
