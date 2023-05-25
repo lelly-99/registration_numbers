@@ -53,11 +53,13 @@ ul {
     margin: 0;
   }
 
-label {
+select {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 45px; 
+    width: 400px;
+    text-align: center;
+    font-weight: bolder;
     font-size: 20px;
-}
-
-.town {
-    width: 20px;
-    margin: 10px;
-}
+    border-radius: 15px;
+  }
+  
