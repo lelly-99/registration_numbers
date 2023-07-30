@@ -1,28 +1,50 @@
-function registrationNumbers(){
-    var registrationNum = []
-    var location = []
-    var fromWhichTown = []
-
-    function setRegistration(registration){
-        registrationNum.push(registration)
+function registrationNumbers() {
+    var registrationNum = "";
+    var location = '';
+    var storeRegistrationNumbers = [];
+  
+    function setRegistration(registration) {
+      registrationNum = registration;
+      return registrationNum;
     }
-
-    function setTown(town){
-        location.push(town)
+  
+    function setTown(town) {
+      location = town;
     }
-
-    function registrations(){
-        for(var i=0; i<registrationNum.length; i++){
-            var regNum = registrationNum[i].trim()
-            if(regNum.startsWith(location))
-            fromWhichTown.push(regNum)
+  
+    function addRegistration(registration) {
+      var enteredRegistration = setRegistration(registration);
+      if (!storeRegistrationNumbers.includes(enteredRegistration)) {
+        storeRegistrationNumbers.push(enteredRegistration);
+      }
+    }
+  
+    function getRegistrations() {
+      return storeRegistrationNumbers;
+    }
+  
+    function getTown() {
+      return location;
+    }
+  
+    function allFromTown() {
+      var fromTown = [];
+      for (var i = 0; i < storeRegistrationNumbers.length; i++) {
+        var regNumber = storeRegistrationNumbers[i].trim();
+        if (regNumber.startsWith(location)) {
+          fromTown.push(regNumber);
         }
-        return fromWhichTown;
+      }
+      return fromTown;
     }
-
+  
     return {
-        setRegistration,
-        setTown,
-        registrations,
+      setRegistration,
+      setTown,
+      getRegistrations,
+      addRegistration,
+      allFromTown,
+      getTown,
     }
-}
+  }
+  
